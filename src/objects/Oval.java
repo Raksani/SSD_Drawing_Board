@@ -3,6 +3,7 @@ package objects;
 import java.awt.Color;
 import java.awt.Graphics;
 
+//Beau Part
 public class Oval extends GObject {
 
 	private Color color;
@@ -11,6 +12,7 @@ public class Oval extends GObject {
 		super(x, y, width, height);
 		this.color = color;
 	}
+
 
 	@Override
 	public void paintObject(Graphics g) {

@@ -3,6 +3,7 @@ package objects;
 import java.awt.Color;
 import java.awt.Graphics;
 
+//Beau Part
 public class Rect extends GObject  {
 
 	private Color color;
