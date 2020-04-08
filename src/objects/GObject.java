@@ -25,20 +25,24 @@ public abstract class GObject {
 	}
 
 	public boolean pointerHit(int pointerX, int pointerY) {
-		// TODO: Implement this method.
+		// to check the pointer is in the area of object
+		// 1. pointerX should be in range of (x,x+width)
+		// 2. pointerY should be in range of (y,y+height)
+		if (pointerX >= x && pointerX <= x + width && pointerY >= y && pointerY <= y + height) return true;
 		return false;
 	}
 	
 	public void selected() {
-		// TODO: Implement this method.
+		this.selected = true;
 	}
 	
 	public void deselected() {
-		// TODO: Implement this method.
+		this.selected = false;
 	}
 	
 	public void move(int dX, int dY) {
-		// TODO: Implement this method.
+		this.x += dX;
+		this.y += dY;
 	}
 
 	public final void paint(Graphics g) {
