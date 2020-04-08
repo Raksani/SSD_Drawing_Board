@@ -25,7 +25,11 @@ public class Oval extends GObject {
 	
 	@Override
 	public void paintLabel(Graphics g) {
-		// TODO: Implement this method.
+		//draw label below the object, "Oval" with the same position of object
+        g.setColor(Color.BLACK);
+        // y + height = below object
+        g.drawString("Oval",x,y + height);
+
 	}
 	
 }
