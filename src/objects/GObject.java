@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+//Beau part
+
 public abstract class GObject {
 
 	protected boolean selected;

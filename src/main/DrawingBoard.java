@@ -14,7 +14,8 @@ public class DrawingBoard extends JPanel {
 	private GObject target;
 	
 	private int gridSize = 10;
-	
+
+	//Beau Part
 	public DrawingBoard() {
 		gObjects = new ArrayList<GObject>();
 		mouseAdapter = new MAdapter();
@@ -70,6 +71,7 @@ public class DrawingBoard extends JPanel {
 		}
 	}
 
+	//Karn Part
 	class MAdapter extends MouseAdapter {
 
 		// TODO: You need some variables here
