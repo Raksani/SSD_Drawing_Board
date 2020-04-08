@@ -25,7 +25,10 @@ public class DrawingBoard extends JPanel {
 	}
 	
 	public void addGObject(GObject gObject) {
-		// TODO: Implement this method.
+	    //Click button -> addOval/addRectangle -> addGObject
+		gObjects.add(gObject);
+		repaint();
+
 	}
 	
 	public void groupAll() {

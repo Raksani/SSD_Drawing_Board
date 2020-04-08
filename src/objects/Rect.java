@@ -18,7 +18,7 @@ public class Rect extends GObject  {
 		//first, set the color as we declare
 		g.setColor(color);
 		//second, draw a rectangle in the position (x,y) with size (width, height)
-		g.fillOval(x,y,width,height);
+		g.fillRect(x,y,width,height);
 	}
 	
 	@Override

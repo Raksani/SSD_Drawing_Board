@@ -20,6 +20,7 @@ public class Oval extends GObject {
 		g.setColor(color);
 		//second, draw an oval in the position (x,y) with size (width, height)
         g.fillOval(x,y,width,height);
+        g.drawOval(x,y,width,height);
 
 	}
 	
