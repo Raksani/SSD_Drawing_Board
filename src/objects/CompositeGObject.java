@@ -1,5 +1,7 @@
 package objects;
 
+import com.sun.tools.corba.se.idl.InterfaceGen;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -16,11 +18,12 @@ public class CompositeGObject extends GObject {
 
     //Karn part
     public void add(GObject gObject) {
-        // TODO: Implement this method.
+        gObjects.add(gObject);
+
     }
     //Karn part
     public void remove(GObject gObject) {
-        // TODO: Implement this method.
+        gObjects.remove(gObject);
     }
 
     // Beau Part
@@ -36,7 +39,30 @@ public class CompositeGObject extends GObject {
 
     //Karn Part
     public void recalculateRegion() {
-        // TODO: Implement this method.
+        int width = 0;
+        int height = 0;
+        int Xmin = Integer.MAX_VALUE;
+        int Ymin = Integer.MAX_VALUE;
+        int Xmax = Integer.MIN_VALUE;
+        int Ymax = Integer.MIN_VALUE;
+
+        for (GObject g: gObjects){
+            if (Xmax < g.x){
+                Xmax = g.x;
+                height = g.height;
+            }
+            if (Ymax < g.y){
+                Ymax = g.y;
+                width = g.width;
+            }
+            Xmin = Math.min(g.x, Xmin);
+            Ymin = Math.min(g.y, Ymin);
+        }
+        super.x = Xmin;
+        super.y = Ymin;
+        super.width = Xmax - Xmin + width;
+        super.height = Ymax - Ymin + height;
+        //จัดไป
     }
 
     //Beau Part
