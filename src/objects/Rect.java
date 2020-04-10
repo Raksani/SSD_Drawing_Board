@@ -27,7 +27,6 @@ public class Rect extends GObject  {
 		g.setColor(Color.BLACK);
 		/* y + height = below object */
 		g.drawString("Rectangle",x, y + height + 15);
-		g.
 	}
 	
 }
