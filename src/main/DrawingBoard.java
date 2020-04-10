@@ -23,24 +23,41 @@ public class DrawingBoard extends JPanel {
 		addMouseMotionListener(mouseAdapter);
 		setPreferredSize(new Dimension(800, 600));
 	}
-	
+
+    /* Click button -> addOval/addRectangle -> addGObject */
 	public void addGObject(GObject gObject) {
-	    //Click button -> addOval/addRectangle -> addGObject
 		gObjects.add(gObject);
+		/* Cause paint () to be invoked (again) */
 		repaint();
 
 	}
 	
 	public void groupAll() {
-		// TODO: Implement this method.
+	    /* create newGroup type CompositeGObject to group every object
+	       which has been created and is already in gObjects list */
+        CompositeGObject group = new CompositeGObject();
+        for (GObject object : this.gObjects) {
+            group.add(object);
+        }
+        /* treat those objects as a group and re-adding them back */
+        group.selected();
+        this.gObjects.clear();
+        group.recalculateRegion();
+        this.gObjects.add(group);
+        repaint();
 	}
 
 	public void deleteSelected() {
-		// TODO: Implement this method.
+	    /* mouses pressed (selected) -> target = gObjects in the list.
+	     So, just delete/remove from the list */
+        this.gObjects.remove(target);
+        repaint();
+
 	}
 	
 	public void clear() {
-		// TODO: Implement this method.
+		this.gObjects.clear();
+		repaint();
 	}
 	
 	@Override

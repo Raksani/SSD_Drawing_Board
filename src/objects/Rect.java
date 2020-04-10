@@ -15,17 +15,17 @@ public class Rect extends GObject  {
 
 	@Override
 	public void paintObject(Graphics g) {
-		//first, set the color as we declare
+		/* Set the color as we declare. */
 		g.setColor(color);
-		//second, draw a rectangle in the position (x,y) with size (width, height)
+		/* Draw a filled rectangle in the position (x,y) with size (width, height) */
 		g.fillRect(x,y,width,height);
 	}
 	
 	@Override
 	public void paintLabel(Graphics g) {
-		//draw label below the object, "Rectangle"
+		/* Draw label below the object, "Rectangle" */
 		g.setColor(Color.BLACK);
-		// y + height = below object
+		/* y + height = below object */
 		g.drawString("Rectangle",x,y + height);
 	}
 	

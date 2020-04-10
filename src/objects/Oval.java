@@ -16,19 +16,18 @@ public class Oval extends GObject {
 
 	@Override
 	public void paintObject(Graphics g) {
-	    //first, set the color as we declare
-		g.setColor(color);
-		//second, draw an oval in the position (x,y) with size (width, height)
+        /* Set the color as we declare. */
+        g.setColor(color);
+        /* Draw a filled oval in the position (x,y) with size (width, height) */
         g.fillOval(x,y,width,height);
-        g.drawOval(x,y,width,height);
 
 	}
 	
 	@Override
 	public void paintLabel(Graphics g) {
-		//draw label below the object, "Oval" with the same position of object
+        /* Draw label below the object, "Oval" */
         g.setColor(Color.BLACK);
-        // y + height = below object
+        /* y + height = below object */
         g.drawString("Oval",x,y + height);
 
 	}

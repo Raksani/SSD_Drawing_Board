@@ -14,11 +14,11 @@ public class CompositeGObject extends GObject {
         gObjects = new ArrayList<GObject>();
     }
 
-    //add and remove Karn part
+    //Karn part
     public void add(GObject gObject) {
         // TODO: Implement this method.
     }
-
+    //Karn part
     public void remove(GObject gObject) {
         // TODO: Implement this method.
     }
@@ -26,7 +26,7 @@ public class CompositeGObject extends GObject {
     // Beau Part
     @Override
     public void move(int dX, int dY) {
-        //move all objects in the list
+        /* Move every object in the list */
         for (GObject gObject : gObjects) {
 //			gObject.x += dX;
 //			gObject.y += dY;
@@ -42,7 +42,7 @@ public class CompositeGObject extends GObject {
     //Beau Part
     @Override
     public void paintObject(Graphics g) {
-        // paint all objects, both oval and rectangle by overriding their own method.
+        /* Paint every object, both oval and rectangle by overriding their own methods. */
         for (GObject gObject : gObjects) {
             gObject.paintObject(g);
         }
@@ -50,7 +50,7 @@ public class CompositeGObject extends GObject {
 
     @Override
     public void paintLabel(Graphics g) {
-        // paint all objects, both oval and rectangle by overriding their own method.
+        /* Paint every object's label, both oval and rectangle by overriding their own methods. */
         for (GObject gObject : gObjects) {
             gObject.paintLabel(g);
         }
